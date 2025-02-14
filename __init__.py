@@ -20,6 +20,10 @@ def hello_world():
 @app.route('/exercices/')
 def exercices():
     return render_template('exercices.html')
+  
+@app.route('/cnam/')
+def cnam():
+    return render_template('cnam.html')
                                                                                                                
 if __name__ == "__main__":
   app.run(debug=True)
