@@ -9,9 +9,9 @@ app = Flask(__name__)
 def MaPremiereAPI():
     return "<h2>Ma page de contact</h2>"
 
-@app.route('/somme')
-def somme():
-    valeurs = request.args.getlist('valeur')
+@app.route('/somme/<path:valeurs>')
+def somme(valeurs):
+    valeurs_list = valeurs.split('/')
     total = 0
     for valeur in valeurs:
         total += int(valeur)
