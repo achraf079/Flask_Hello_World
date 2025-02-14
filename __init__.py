@@ -34,6 +34,10 @@ def exercices():
 @app.route('/cnam/')
 def cnam():
     return render_template('cnam.html')
+
+@app.route('/cv/')
+def cv():
+    return render_template('cv.html')
                                                                                                                
 if __name__ == "__main__":
   app.run(debug=True)
