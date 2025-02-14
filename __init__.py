@@ -9,14 +9,9 @@ app = Flask(__name__)
 def MaPremiereAPI():
     return "<h2>Ma page de contact</h2>"
 
-@app.route('/somme/', methods=['GET'])
-def somme():
-  try:    
-    valeur1 = int(request.args.get('valeur1'))
-    valeur2 = int(request.args.get('valeur2'))
-  except (ValueError, TypeError):
-    return "<h2>Erreur : Veuillez entrer des nombres entiers valides.</h2>", 400
-  return "<h2>Le carré de votre valeur est : </h2>" + str(valeur1 + valeur2)
+@app.route('somme/<int:valeur1>/<int:valeur2>')
+def somme(val_user):
+return "<h2>Le carré de votre valeur est : </h2>" + str(val_user2 + val_user1)
                                                                                                                                        
 @app.route('/')
 def hello_world():
