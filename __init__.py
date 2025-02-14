@@ -11,6 +11,10 @@ def MaPremiereAPI():
 
 @app.route('/somme/<int:valeur1>/<int:valeur2>')
 def somme(valeur1, valeur2):
+    if resultat % 2 == 0:
+        parite = "pair"
+    else:
+        parite = "impair"
     return f"<h2>La somme de {valeur1} et {valeur2} est : {valeur1 + valeur2}</h2>"
                                                                                                                                        
 @app.route('/')
