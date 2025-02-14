@@ -11,15 +11,15 @@ def MaPremiereAPI():
 
 @app.route('/somme')
 def somme():
-  valeurs = request.args.getlist('valeur')  #
+    valeurs = request.args.getlist('valeur')
     total = 0
     for valeur in valeurs:
         total += int(valeur)
-  if total % 2 == 0:
+    if total % 2 == 0:
         parite = "pair"
-  else:
+    else:
         parite = "impair"
-  return f"<h2>La somme des valeurs : {valeurs} est : {total} ==> est donc {parite}</h2>"
+    return f"<h2>La somme des valeurs : {valeurs} est : {total} ==> est donc {parite}</h2>"
                                                                                                                                        
 @app.route('/')
 def hello_world():
