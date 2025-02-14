@@ -10,7 +10,7 @@ def MaPremiereAPI():
     return "<h2>Ma page de contact</h2>"
 
 @app.route('/somme/', methods=['GET'])
-def somme(val_user):
+def somme():
   try:    
     valeur1 = int(input("Veuillez saisir un nombre"))
     valeur2 = int(input("Veuillez saisir un nombre"))
