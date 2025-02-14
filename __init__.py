@@ -21,7 +21,7 @@ def somme(valeurs):
         parite = "impair"
     valeurs_int = [int(valeur) for valeur in valeurs_list]
     valeurMax = max(valeurs_int)
-    return f"<h2>La somme des valeurs : {valeurs_list } est : {total} ==> est donc {parite} | La valeur maximale : {valeurMax} </h2>"
+    return f"<h2>La somme des valeurs : {valeurs_list } est : {total} ==> est donc {parite} <BR> | La valeur maximale : {valeurMax} </h2>"
                                                                                                                                        
 @app.route('/')
 def hello_world():
