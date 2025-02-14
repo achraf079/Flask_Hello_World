@@ -9,7 +9,7 @@ app = Flask(__name__)
 def MaPremiereAPI():
     return "<h2>Ma page de contact</h2>"
 
-@app.route('/somme/')
+@app.route('/somme/', methods=['GET'])
 def somme(val_user):
   try:    
     valeur1 = int(input("Veuillez saisir un nombre"))
