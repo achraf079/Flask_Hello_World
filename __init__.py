@@ -19,7 +19,8 @@ def somme(valeurs):
         parite = "pair"
     else:
         parite = "impair"
-    return f"<h2>La somme des valeurs : {valeurs_list } est : {total} ==> est donc {parite}</h2>"
+    valeurMax = max(valeurs_list)  
+    return f"<h2>La somme des valeurs : {valeurs_list } est : {total} ==> est donc {parite} | La valeur maximale : {valeurMax} </h2>"
                                                                                                                                        
 @app.route('/')
 def hello_world():
