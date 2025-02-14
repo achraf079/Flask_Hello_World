@@ -13,13 +13,13 @@ def MaPremiereAPI():
 def somme(valeurs):
     valeurs_list = valeurs.split('/')
     total = 0
-    for valeur in valeurs:
+    for valeur in valeurs_list :
         total += int(valeur)
     if total % 2 == 0:
         parite = "pair"
     else:
         parite = "impair"
-    return f"<h2>La somme des valeurs : {valeurs} est : {total} ==> est donc {parite}</h2>"
+    return f"<h2>La somme des valeurs : {valeurs_list } est : {total} ==> est donc {parite}</h2>"
                                                                                                                                        
 @app.route('/')
 def hello_world():
