@@ -12,11 +12,10 @@ def MaPremiereAPI():
 @app.route('/somme/', methods=['GET'])
 def somme():
   try:    
-    valeur1 = int(input("Veuillez saisir un nombre"))
-    valeur2 = int(input("Veuillez saisir un nombre"))
-  except ValueError:    
+    valeur1 = int(request.args.get('valeur1'))
+    valeur2 = int(request.args.get('valeur1'))
+  except (ValueError, TypeError):
     print("Veuillez entrer un nombre entier valide.")
-    
   return "<h2>Le carré de votre valeur est : </h2>" + str(valeur1 + valeur2)
                                                                                                                                        
 @app.route('/')
