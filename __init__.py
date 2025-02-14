@@ -16,7 +16,7 @@ def somme(valeur1, valeur2):
         parite = "pair"
   else:
         parite = "impair"
-  return f"<h2>La somme de {valeur1} et {valeur2} est : {resultat} ==> est donc{parite})</h2>"
+  return f"<h2>La somme de {valeur1} et {valeur2} est : {resultat} ==> est donc {parite})</h2>"
                                                                                                                                        
 @app.route('/')
 def hello_world():
