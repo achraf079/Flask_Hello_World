@@ -38,6 +38,10 @@ def cnam():
 @app.route('/cv/')
 def cv():
     return render_template('cv.html')
+
+@app.route('/Liste/')
+def exercices():
+    return render_template('1_Liste_Base.html')
                                                                                                                
 if __name__ == "__main__":
   app.run(debug=True)
