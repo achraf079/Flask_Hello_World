@@ -56,8 +56,8 @@ def liste():
     return render_template('1_Liste_Base.html')
 
 @app.route('/TP1/')
-def tp_html():
-    return render_template('tp_html.html')
+def TP1():
+    return render_template('TP1.html')
                                                                                                                
 if __name__ == "__main__":
   app.run(debug=True)
