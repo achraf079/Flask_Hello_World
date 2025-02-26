@@ -43,6 +43,10 @@ def Exercices_HTML():
 def cv():
     return render_template('cv.html')
 
+@app.route('/formulaire.html/')
+def formulaire_html():
+    return render_template('formulaire.html')
+
 @app.route('/exercice_base3/')
 def exercice_base3():
     return render_template('exercice_base3.html')
