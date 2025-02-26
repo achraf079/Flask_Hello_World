@@ -40,7 +40,7 @@ def cv():
     return render_template('cv.html')
 
 @app.route('/Liste/')
-def exercices():
+def liste():
     return render_template('1_Liste_Base.html')
                                                                                                                
 if __name__ == "__main__":
