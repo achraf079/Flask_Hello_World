@@ -55,9 +55,9 @@ def exercice_base3():
 def liste():
     return render_template('1_Liste_Base.html')
 
-@app.route('/TP1/')
-def TP1():
-    return render_template('TP1.html')
+@app.route('/tp_html/')
+def tp_html():
+    return render_template('tp_html.html')
                                                                                                                
 if __name__ == "__main__":
   app.run(debug=True)
