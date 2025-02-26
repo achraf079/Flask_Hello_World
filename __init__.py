@@ -39,7 +39,7 @@ def cnam():
 def cv():
     return render_template('cv.html')
 
-@app.route('/liste/')
+@app.route('/exercice_base/')
 def liste():
     return render_template('1_Liste_Base.html')
                                                                                                                
