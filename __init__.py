@@ -35,6 +35,10 @@ def exercices():
 def cnam():
     return render_template('cnam.html')
 
+@app.route('/Exercices HTML 2/')
+def Exercices_HTML():
+    return render_template('Exercices_HTML.html')
+
 @app.route('/cv/')
 def cv():
     return render_template('cv.html')
