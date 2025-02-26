@@ -54,6 +54,10 @@ def exercice_base3():
 @app.route('/exercice_base/')
 def liste():
     return render_template('1_Liste_Base.html')
+
+@app.route('/tp_html/')
+def tp_html():
+    return render_template('tp_html.html')
                                                                                                                
 if __name__ == "__main__":
   app.run(debug=True)
