@@ -68,7 +68,7 @@ def svg_cards():
     return render_template('svg_cards.html')
 
 @app.route('/chenille/')
-def svg_chenillecards():
+def svg_chenille():
     return render_template('chenille.html')
                                                                                                                
 if __name__ == "__main__":
