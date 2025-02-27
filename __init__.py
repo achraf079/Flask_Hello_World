@@ -62,6 +62,10 @@ def liste():
 @app.route('/maison/')
 def maison():
     return render_template('Exemple_Base_SVG.html')
+
+@app.route('/vallet/')
+def svg_cards():
+    return render_template('svg_cards.html')
                                                                                                                
 if __name__ == "__main__":
   app.run(debug=True)
