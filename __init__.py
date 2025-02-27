@@ -70,6 +70,10 @@ def svg_cards():
 @app.route('/chenille/')
 def svg_chenille():
     return render_template('chenille.html')
+
+@app.route('/carre/')
+def carre():
+    return render_template('CSS_Carre.html')
                                                                                                                
 if __name__ == "__main__":
   app.run(debug=True)
