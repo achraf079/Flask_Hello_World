@@ -2,52 +2,7 @@
 
 <head>
     <title>Exercice CSS</title>
-    <style>
-        html {
-            background-color: black;
-            text-align: center;
-        }
-
-        #Madiv1 {
-            color: white;
-            background-color: green;
-            position: absolute;
-            left: 25px;
-            top: 25px;
-            width: 100px;
-            height: 100px;
-        }
-
-        .haut_droite {
-            color: white;
-            background-color: yellow;
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            top: 25px;
-            right: 25px;
-        }
-
-        .bas_gauche {
-            color: white;
-            background-color: red;
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            bottom: 25px;
-            left: 25px;
-        }
-
-        .bas_droite {
-            color: white;
-            background-color: blue;
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            bottom: 25px;
-            right: 25px;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='carre.css') }}">
 </head>
 
 <body>
