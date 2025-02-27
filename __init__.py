@@ -66,6 +66,10 @@ def maison():
 @app.route('/vallet/')
 def svg_cards():
     return render_template('svg_cards.html')
+
+@app.route('/chenille/')
+def svg_chenillecards():
+    return render_template('chenille.html')
                                                                                                                
 if __name__ == "__main__":
   app.run(debug=True)
