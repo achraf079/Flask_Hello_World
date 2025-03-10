@@ -30,6 +30,10 @@ def hello_world():
 @app.route('/etoiles/')
 def etoiles():
     return render_template('carre_etoiles.html')
+
+@app.route('/images/')
+def images():
+    return render_template('images.html')
                                                                                                                
 if __name__ == "__main__":
   app.run(debug=True)

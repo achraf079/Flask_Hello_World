@@ -1,15 +1,16 @@
+<!DOCTYPE html>
 <html>
-<head>
-<title>Mon Exercice JS N°2</title>
-<script>
 
-function afficher(){
+<head>
+    <title>Mon Exercice JS N°2</title>
+    <script>
+      function afficher(){
 	
 	var saisie = parseInt(document.getElementById('V1').value);
 	var resultat = "";	
 		
 	for (j=0; j<saisie ; j++){
-        for (i=0; i<saisie ; i++){
+        for (i=0; i<saisie-j ; i++){
                 resultat += "*"; 
         }
                 resultat += "</br>";
@@ -19,13 +20,15 @@ function afficher(){
 
 }
 
-</script>
-
+}
+    </script>
 </head>
+
 <body>
-<h1>Les étoiles</h1>
-<p>Saisir un chiffre : <input id="V1"/></p>
-<button onclick="afficher()">Afficher</button>
-<div id="result"></div>
+    <h1>Les étoiles</h1>
+    <p>Saisir un chiffre : <input value="5" id="V1" /></p>
+    <button onclick="afficher()">Afficher</button>
+    <div id="result"></div>
 </body>
-</html> 
+
+</html>
