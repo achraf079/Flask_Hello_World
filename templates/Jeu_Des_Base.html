@@ -2,57 +2,25 @@
 
 <head>
   <script>
+    const des = {
+      1: ['C3'],
+      2: ['C2', 'C4'],
+      3: ['C2', 'C3', 'C4'],
+      4: ['C1', 'C2', 'C4', 'C5'],
+      5: ['C1', 'C2', 'C3', 'C4', 'C5'],
+      6: ['C1', 'C2', 'C4', 'C5', 'C6', 'C7']
+    };
+
     function lancer() {
-      var Val = Math.floor((Math.random() * 6) + 1);
-      document.getElementById('C4').style.display = 'none';
-      document.getElementById('C1').style.display = 'none';
-      document.getElementById('C7').style.display = 'none';
-      document.getElementById('C6').style.display = 'none';
-      document.getElementById('C5').style.display = 'none';
-      document.getElementById('C3').style.display = 'none';
-      document.getElementById('C2').style.display = 'none';
+      const val = Math.floor(Math.random() * 6) + 1;
 
-      switch (Val) {
-        case 1:
-          document.getElementById('C3').style.display = 'block';
-          break;
+      document.querySelectorAll('[id^="C"]').forEach(dot => {
+        dot.style.display = 'none';
+      });
 
-        case 2:
-          document.getElementById('C2').style.display = 'block';
-          document.getElementById('C4').style.display = 'block';
-          break;
-
-        case 3:
-          document.getElementById('C2').style.display = 'block';
-          document.getElementById('C3').style.display = 'block';
-          document.getElementById('C4').style.display = 'block';
-          break;
-
-        case 4:
-          document.getElementById('C1').style.display = 'block';
-          document.getElementById('C2').style.display = 'block';
-          document.getElementById('C4').style.display = 'block';
-          document.getElementById('C5').style.display = 'block';
-          break;
-
-        case 5:
-          document.getElementById('C1').style.display = 'block';
-          document.getElementById('C2').style.display = 'block';
-          document.getElementById('C3').style.display = 'block';
-          document.getElementById('C4').style.display = 'block';
-          document.getElementById('C5').style.display = 'block';
-          break;
-
-        case 6:
-          document.getElementById('C1').style.display = 'block';
-          document.getElementById('C2').style.display = 'block';
-          document.getElementById('C4').style.display = 'block';
-          document.getElementById('C5').style.display = 'block';
-          document.getElementById('C6').style.display = 'block';
-          document.getElementById('C7').style.display = 'block';
-          break;
-      }
-
+      des[val].forEach(dotId => {
+        document.getElementById(dotId).style.display = 'block';
+      });
     }
   </script>
 </head>
