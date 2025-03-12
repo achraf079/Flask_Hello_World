@@ -34,6 +34,10 @@ def etoiles():
 @app.route('/images/')
 def images():
     return render_template('images.html')
+
+@app.route('/jeu_des/')
+def jeu_des():
+    return render_template('Jeu_Des_Base.html')
                                                                                                                
 if __name__ == "__main__":
   app.run(debug=True)
