@@ -21,13 +21,16 @@
       des[val].forEach(dotId => {
         document.getElementById(dotId).style.display = 'block';
       });
+
+      document.getElementById('resultat').textContent = 'Résultat : ' + val;
     }
   </script>
 </head>
 
 <body>
-  <button onclick="lancer()">Lancer</button>
-  <svg width="300px" height="300px" style="background-color:lightgray; border:2px solid black">
+  <button onclick="lancer()" style="color: antiquewhite ;background-color: #4CAF50;border-radius:5px;margin-bottom: 20px;padding: 10px 20px;">Lancer</button>
+  <p id="resultat"></p>
+  <svg width="300px" height="300px" style="background-color:lightgray;border-radius:5px;border:2px solid black">
 
     <circle id="C1" cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" style="display:none" />
     <circle id="C2" cx="250" cy="50" r="40" stroke="black" stroke-width="3" fill="red" style="display:none" />
