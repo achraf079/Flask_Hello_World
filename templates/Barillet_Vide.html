@@ -8,26 +8,25 @@
 		function coloration(id) {
 
 			let chambre = document.getElementById("Br" + id);
-		}
 
-		if (chambre.style.fill === "red") {
-			chambre.style.fill = "gray";
-			barillet_selec--;
-		
-		}
+			if (chambre.style.fill === "red") {
+				chambre.style.fill = "gray";
+				barillet_selec--;
 
-		else if (chambre < 3) {
-			elemment.style.fill = "red";
-			barillet_selec++;
-		}
+			}
 
-		else {
-			alert("Vous ne pouvez pas choisir plus de 3 chambres");
-		}
+			else if (barillet_selec < 3) {
+				chambre.style.fill = "red";
+				barillet_selec++;
+			}
 
-		function lancer () {
+			else {
+				alert("Vous ne pouvez pas choisir plus de 3 chambres");
+			}
+		}
+		function lancer() {
 			if (barillet_selec === 0) {
-				alert("Veuillez selectionner une chambre");	
+				alert("Veuillez selectionner une chambre");
 			}
 
 			const numTire = Math.floor(Math.random() * 6) + 1;
