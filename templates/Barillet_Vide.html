@@ -4,9 +4,20 @@
 	<script>
 
 		let barillet_selec = 0;
+		let gains_collecte = 0;
+		let partie = true;
+
+
+		function init() {
+			for (let i = 1; i <= 6; i++) {
+				document.getElementById("Br" + i).style.fill = "gray";
+			}
+			barillet_selec = 0;
+			partie = true;
+			miseAjourStats();
+		}
 
 		function coloration(id) {
-
 			let chambre = document.getElementById("Br" + id);
 
 			if (chambre.style.fill === "red") {
@@ -32,11 +43,16 @@
 				return;
 			}
 
+
+			if (!partie) {
+				alert("Veuillez commencer une nouvelle partie");
+				return;
+			}
 			const numTire = Math.floor(Math.random() * 6) + 1;
 
 			let NumSelection = document.getElementById("Br" + numTire).style.fill === "red";
-
 			document.getElementById("Br" + numTire).style.fill = "blue";
+
 
 			if (NumSelection) {
 				alert("Vous avez perdu");
@@ -58,8 +74,22 @@
 				}
 
 				gains_collecte += gains;
+				alert("Vous avez gagné " + gains + " €");
 				document.getElementById("gains").textContent = gains_collecte + " €";
 			}
+
+			miseAjourStats();
+			partie = false;
+		}
+
+		function miseAjourStats() {
+			document.getElementById("gains").textContent = gains_collecte.toLocaleString() + " €";
+
+		}
+
+
+		function nouvellePartie() {
+			init();
 		}
 
 	</script>
@@ -84,6 +114,7 @@
 	</svg>
 
 	<button onclick="lancer()">Jouer</button>
+	<button onclick="nouvellePartie()">Nouvelle partie</button>
 
 </body>
 
