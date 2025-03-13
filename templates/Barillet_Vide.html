@@ -29,6 +29,7 @@
 
 			if (barillet_selec === 0) {
 				alert("Veuillez selectionner une chambre");
+				return;
 			}
 
 			const numTire = Math.floor(Math.random() * 6) + 1;
@@ -39,7 +40,7 @@
 
 			if (NumSelection) {
 				alert("Vous avez perdu");
-				gains_collecte == 0
+				gains_collecte = 0
 			} else {
 
 				let gains = 0
@@ -57,7 +58,7 @@
 				}
 
 				gains_collecte += gains;
-				document.getElementById("gains").textContent = totalGains + " €";
+				document.getElementById("gains").textContent = gains_collecte + " €";
 			}
 		}
 
