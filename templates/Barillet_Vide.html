@@ -3,27 +3,35 @@
 <head>
 	<script>
 
-		function numero_chambre(id) {
-			alert("Numero : " + id);
-		}
-
-		function lancer() {
-			const val = Math.floor(Math.random() * 6) + 1;
-
-			if (document.getElementById("Br" + val).style.fill == "gray") {
-				alert("veuillez selectionner un numéro");
-				return;
-			}
-			if (document.getElementById("Br" + val).style.fill == "red") {
-				alert("Perdu !!!!");
-			}
-			else {
-				alert("Gagné !!!");
-			}
-		}
+		let barillet_selec = 0;
 
 		function coloration(id) {
-			document.getElementById("Br" + id).style.fill = "red";
+
+			let chambre = document.getElementById("Br" + id);
+		}
+
+		if (chambre.style.fill === "red") {
+			chambre.style.fill = "gray";
+			barillet_selec--;
+		
+		}
+
+		else if (chambre < 3) {
+			elemment.style.fill = "red";
+			barillet_selec++;
+		}
+
+		else {
+			alert("Vous ne pouvez pas choisir plus de 3 chambres");
+		}
+
+		function lancer () {
+			if (barillet_selec === 0) {
+				alert("Veuillez selectionner une chambre");	
+			}
+
+			const numTire = Math.floor(Math.random() * 6) + 1;
+
 		}
 
 	</script>
