@@ -3,21 +3,29 @@
 <head>
 
 	<style>
+
+body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .controls {
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .stats {
+            margin-top: 20px;
+            font-size: 18px;
+        }
 		* {
 			margin: 0;
 			padding: 0;
 			box-sizing: border-box;
-		}
-
-		body {
-			font-family: Arial, sans-serif;
-			background-color: #f4f4f4;
-			color: #333;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			height: 100vh;
-			margin: 0;
 		}
 
 		.container {
@@ -32,20 +40,6 @@
 			font-size: 2.5rem;
 			margin-bottom: 20px;
 			color: #e74c3c;
-		}
-
-		.stats {
-			margin-bottom: 20px;
-		}
-
-		.stats h2,
-		.stats h3 {
-			font-size: 1.2rem;
-			margin: 5px 0;
-		}
-
-		.roulette {
-			margin: 20px 0;
 		}
 
 		.controls button {
@@ -186,6 +180,19 @@
 		<div class="controls">
 			<button onclick="lancer()">Jouer</button>
 			<button onclick="nouvellePartie()">Nouvelle partie</button>
+		</div>
+
+		<div>
+			<h3>Règles du jeu</h3>
+			<p>1. Placez 1 à 3 balles dans le barillet (en cliquant sur les chambres)</p>
+			<p>2. Cliquez sur "Jouer" pour lancer la roulette</p>
+			<p>3. Si vous gagnez :</p>
+			<ul>
+				<li>1 balle = 10 000 €</li>
+				<li>2 balles = 100 000 €</li>
+				<li>3 balles = 1 000 000 €</li>
+			</ul>
+			<p>4. Si vous perdez, vous perdez tout !</p>
 		</div>
 	</div>
 </body>
