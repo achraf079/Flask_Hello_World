@@ -24,13 +24,41 @@
 				alert("Vous ne pouvez pas choisir plus de 3 chambres");
 			}
 		}
+
 		function lancer() {
+
 			if (barillet_selec === 0) {
 				alert("Veuillez selectionner une chambre");
 			}
 
 			const numTire = Math.floor(Math.random() * 6) + 1;
 
+			let NumSelection = document.getElementById("Br" + numTire).style.fill === "red";
+
+			document.getElementById("Br" + numTire).style.fill = "blue";
+
+			if (NumSelection) {
+				alert("Vous avez perdu");
+				gains_collecte == 0
+			} else {
+
+				let gains = 0
+
+				if (barillet_selec === 1) {
+					gains = 10000;
+				}
+
+				else if (barillet_selec === 2) {
+					gains = 100000;
+				}
+
+				else if (barillet_selec === 3) {
+					gains = 1000000;
+				}
+
+				gains_collecte += gains;
+				document.getElementById("gains").textContent = totalGains + " €";
+			}
 		}
 
 	</script>
@@ -40,7 +68,9 @@
 
 <body>
 	<h1>Roulette Russe</h1>
-
+	<div>
+		<h2>Total des gains : <span id="gains">0 €</span></h2>
+	</div>
 	<svg width=200 height=200 style="background-color:antiquewhite">
 		<circle cx="100" cy="100" r="95" stroke="black" stroke-width="3" fill="none" />
 		<circle onclick="coloration(1)" id="Br1" cx="100" cy="40" r="25" stroke="black" stroke-width="3" fill="gray" />
