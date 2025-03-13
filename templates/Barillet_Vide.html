@@ -3,25 +3,22 @@
 <head>
 	<script>
 
+		function numero_chambre(id) {
+			alert("chambre Numero : " + id);
+		}
 
 		function lancer() {
-            const num_chambre = {
-                1: 'Br1',
-                2: 'Br2',
-                3: 'Br3',
-                4: 'Br4',
-                5: 'Br5',
-                6: 'Br6'
-            };
+			alert("le barillet tourne");
+		}
 
- 
-            const val = Math.floor(Math.random() * 6) + 1;
-
-            const circle_clique = num_chambre[val];
-
-            alert(`La chambre sélectionnée est : ${circle_clique}`);
-        }
-
+		function coloration(id) {
+			//document.array.forEach('[id^="Br"]').style.fill="red";
+			document.querySelectorAll('[id^="Br"]').forEach(dot => {
+				dot.style.fill = 'red';
+				
+			});
+			//document.querySelectorAll('[id^="Br"]').style.fill="red";
+		}
 
 	</script>
 
@@ -33,12 +30,12 @@
 
 	<svg width=200 height=200 style="background-color:antiquewhite">
 		<circle cx="100" cy="100" r="95" stroke="black" stroke-width="3" fill="none" />
-		<circle onclick="lancer()" id="Br1" cx="100" cy="40" r="25" stroke="black" stroke-width="3" fill="gray" />
-		<circle onclick="lancer()" id="Br2" cx="150" cy="70" r="25" stroke="black" stroke-width="3" fill="gray" />
-		<circle onclick="lancer()" id="Br3" cx="50" cy="70" r="25" stroke="black" stroke-width="3" fill="gray" />
-		<circle onclick="lancer()" id="Br4" cx="50" cy="130" r="25" stroke="black" stroke-width="3" fill="gray" />
-		<circle onclick="lancer()" id="Br5" cx="150" cy="130" r="25" stroke="black" stroke-width="3" fill="gray" />
-		<circle onclick="lancer()" id="Br6" cx="100" cy="160" r="25" stroke="black" stroke-width="3" fill="gray" />
+		<circle onclick="coloration(1)" id="Br1" cx="100" cy="40" r="25" stroke="black" stroke-width="3" fill="gray" />
+		<circle onclick="coloration(2)" id="Br2" cx="150" cy="70" r="25" stroke="black" stroke-width="3" fill="gray" />
+		<circle onclick="coloration(3)" id="Br3" cx="50" cy="70" r="25" stroke="black" stroke-width="3" fill="gray" />
+		<circle onclick="coloration(4)" id="Br4" cx="50" cy="130" r="25" stroke="black" stroke-width="3" fill="gray" />
+		<circle onclick="coloration(5)" id="Br5" cx="150" cy="130" r="25" stroke="black" stroke-width="3" fill="gray" />
+		<circle onclick="coloration(6)" id="Br6" cx="100" cy="160" r="25" stroke="black" stroke-width="3" fill="gray" />
 		<circle onclick="lancer()" cx="100" cy="100" r="10" stroke="black" stroke-width="3" fill="black" />
 	</svg>
 
