@@ -1,6 +1,69 @@
 </html>
 
 <head>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f4f4f4;
+			color: #333;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			margin: 0;
+		}
+
+		.container {
+			text-align: center;
+			background-color: #fff;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		}
+
+		h1 {
+			font-size: 2.5rem;
+			margin-bottom: 20px;
+			color: #e74c3c;
+		}
+
+		.stats {
+			margin-bottom: 20px;
+		}
+
+		.stats h2,
+		.stats h3 {
+			font-size: 1.2rem;
+			margin: 5px 0;
+		}
+
+		.roulette {
+			margin: 20px 0;
+		}
+
+		.controls button {
+			background-color: #3498db;
+			color: white;
+			border: none;
+			padding: 10px 20px;
+			margin: 5px;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 1rem;
+			transition: background-color 0.3s;
+		}
+
+		.controls button:hover {
+			background-color: #2980b9;
+		}
+	</style>
 	<script>
 
 		let barillet_selec = 0;
@@ -98,24 +161,33 @@
 </head>
 
 <body>
-	<h1>Roulette Russe</h1>
-	<div>
-		<h2>Total des gains : <span id="gains">0 €</span></h2>
+	<div class="container">
+		<h1>Roulette Russe</h1>
+		<div>
+			<h2>Total des gains : <span id="gains">0 €</span></h2>
+		</div>
+		<svg width=200 height=200 style="background-color:antiquewhite">
+			<circle cx="100" cy="100" r="95" stroke="black" stroke-width="3" fill="none" />
+			<circle onclick="coloration(1)" id="Br1" cx="100" cy="40" r="25" stroke="black" stroke-width="3"
+				fill="gray" />
+			<circle onclick="coloration(2)" id="Br2" cx="150" cy="70" r="25" stroke="black" stroke-width="3"
+				fill="gray" />
+			<circle onclick="coloration(3)" id="Br3" cx="50" cy="70" r="25" stroke="black" stroke-width="3"
+				fill="gray" />
+			<circle onclick="coloration(4)" id="Br4" cx="50" cy="130" r="25" stroke="black" stroke-width="3"
+				fill="gray" />
+			<circle onclick="coloration(5)" id="Br5" cx="150" cy="130" r="25" stroke="black" stroke-width="3"
+				fill="gray" />
+			<circle onclick="coloration(6)" id="Br6" cx="100" cy="160" r="25" stroke="black" stroke-width="3"
+				fill="gray" />
+			<circle onclick="lancer()" cx="100" cy="100" r="10" stroke="black" stroke-width="3" fill="black" />
+		</svg>
+
+		<div class="controls">
+			<button onclick="lancer()">Jouer</button>
+			<button onclick="nouvellePartie()">Nouvelle partie</button>
+		</div>
 	</div>
-	<svg width=200 height=200 style="background-color:antiquewhite">
-		<circle cx="100" cy="100" r="95" stroke="black" stroke-width="3" fill="none" />
-		<circle onclick="coloration(1)" id="Br1" cx="100" cy="40" r="25" stroke="black" stroke-width="3" fill="gray" />
-		<circle onclick="coloration(2)" id="Br2" cx="150" cy="70" r="25" stroke="black" stroke-width="3" fill="gray" />
-		<circle onclick="coloration(3)" id="Br3" cx="50" cy="70" r="25" stroke="black" stroke-width="3" fill="gray" />
-		<circle onclick="coloration(4)" id="Br4" cx="50" cy="130" r="25" stroke="black" stroke-width="3" fill="gray" />
-		<circle onclick="coloration(5)" id="Br5" cx="150" cy="130" r="25" stroke="black" stroke-width="3" fill="gray" />
-		<circle onclick="coloration(6)" id="Br6" cx="100" cy="160" r="25" stroke="black" stroke-width="3" fill="gray" />
-		<circle onclick="lancer()" cx="100" cy="100" r="10" stroke="black" stroke-width="3" fill="black" />
-	</svg>
-
-	<button onclick="lancer()">Jouer</button>
-	<button onclick="nouvellePartie()">Nouvelle partie</button>
-
 </body>
 
 </html>
